@@ -16,19 +16,19 @@ const getMappedVariant = (variant) => {
   }
 };
 
-const Typography = (props) => (
+const TypographyComponent = (props) => (
   <Typography variant={getMappedVariant(props.variant)}>
     {props.children}
   </Typography>
 );
 
-Typography.propTypes = {
+TypographyComponent.propTypes = {
   children: PropTypes.string.isRequired,
   variant: PropTypes.oneOf(["header", "title", "subtitle", "body"]),
 };
 
-Typography.defaultProps = {
+TypographyComponent.defaultProps = {
   variant: "body",
 };
 
-export default Typography;
+export default TypographyComponent;
